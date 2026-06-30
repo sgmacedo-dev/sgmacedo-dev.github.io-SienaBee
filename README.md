@@ -13,7 +13,7 @@ Bem-vindo ao repositório central do ecossistema digital **SIENA BEE**. Este esp
 
 Navegar pela realidade sendo uma mente neurodivergente significa que o mundo externo frequentemente chega até nós em um volume insustentável. As ruas clamam por pressa, a modernidade exala uma cacofonia barulhenta e acelerada. 
 
-Como uma bióloga pesquisadora na Amazônia e uma alma amante das Artes, meu instinto mais profundo é criar ecossistemas de proteção, afeto e beleza. 
+Como cientista polímata e uma alma amante das artes, meu instinto mais profundo é criar ecossistemas de proteção, afeto e beleza. 
 
 Meus fones antibarulho são minha armadura de isolamento acústico; a literatura clássica e a fotografia são minhas lentes de tradução. Minhas caminhadas refletindo internamente pelas ruas das cidades são a forma como reconstruo o que meus olhos físicos veem. Este blog é um convite para desacelerarmos juntos e buscarmos o nosso *Ikigai*.
 
@@ -50,5 +50,5 @@ O site é gerado de forma estática e distribuído globalmente através do **Git
 ---
 
 <p align="center">
-  <i>Sintonizado com o silêncio, a ciência e a arte na Amazônia. ✨️🐝</i>
+  <i>Sintonizado com o silêncio, a filosofia e o slow living na Amazônia. ✨️🐝</i>
 </p>
