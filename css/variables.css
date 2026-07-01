@@ -1,0 +1,73 @@
+/* ==========================================================
+   SIENA BEE
+   Design System
+   Version 1.0
+========================================================== */
+
+:root{
+
+    /* ========= COLORS ========= */
+
+    --background:#F6F2EC;
+    --surface:#FCFAF7;
+    --paper:#FFFFFF;
+
+    --text:#231F1C;
+    --text-light:#5F5A55;
+
+    --gold:#C7A75A;
+    --gold-dark:#B48E3E;
+
+    --copper:#A96A43;
+
+    --olive:#6A6D58;
+
+    --border:#E5DDD2;
+
+    --shadow:rgba(0,0,0,.08);
+
+    --shadow-hover:rgba(0,0,0,.15);
+
+    /* ========= TYPOGRAPHY ========= */
+
+    --font-title:'Cormorant Garamond', serif;
+
+    --font-body:'Lora', serif;
+
+    --font-ui:'Inter', sans-serif;
+
+    /* ========= FONT SIZES ========= */
+
+    --hero-title:clamp(3rem,7vw,6rem);
+
+    --hero-subtitle:clamp(1.1rem,2vw,1.4rem);
+
+    --h2:clamp(2rem,4vw,3rem);
+
+    --h3:1.45rem;
+
+    --body:1.1rem;
+
+    --small:.95rem;
+
+    /* ========= SPACING ========= */
+
+    --section-padding:7rem;
+
+    --container:1180px;
+
+    --radius:14px;
+
+    /* ========= SHADOW ========= */
+
+    --shadow-soft:0 10px 30px rgba(0,0,0,.08);
+
+    --shadow-medium:0 20px 40px rgba(0,0,0,.10);
+
+    --shadow-large:0 30px 60px rgba(0,0,0,.15);
+
+    /* ========= TRANSITIONS ========= */
+
+    --transition:.35s ease;
+
+}
