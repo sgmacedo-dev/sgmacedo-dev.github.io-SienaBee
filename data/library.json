@@ -1,34 +1,43 @@
 [
   {
-    "title": "Kindle Paperwhite",
-    "category": "Reading",
-    "description": "My preferred companion for reading and research.",
-    "image": "images/library/kindle.webp",
-    "link": "https://link.amazon/B0cno9kf5",
-    "button": "View on Amazon"
+    "title":"Kindle Paperwhite",
+    "category":"Books",
+    "description":"My preferred e-reader.",
+    "image":"images/library/kindle.webp",
+    "link":"SEU_LINK",
+    "button":"Amazon"
   },
+
   {
-    "title": "Noise Cancelling Headphones",
-    "category": "Audio",
-    "description": "Silence is an indispensable tool for deep work.",
-    "image": "images/library/headphones.webp",
-    "link": "https://link.amazon/B0gHh7lqH",
-    "button": "View"
+    "title":"The Daily Stoic",
+    "category":"Books",
+    "description":"One page every morning.",
+    "image":"images/library/dailystoic.webp",
+    "link":"SEU_LINK",
+    "button":"Amazon"
   },
+
   {
-    "title": "Fountain Pen",
-    "category": "Writing",
-    "description": "Writing slowly is thinking twice.",
-    "image": "images/library/fountainpen.webp",
-    "link": "https://link.amazon/B0e0UnMLI",
-    "button": "View"
+    "title":"Sony WH-1000XM6",
+    "category":"Audio",
+    "description":"Noise cancelling.",
+    "image":"images/library/sony.webp",
+    "link":"SEU_LINK",
+    "button":"Amazon"
   },
+
   {
-    "title": "Tea Ritual",
-    "category": "Slow Living",
-    "description": "Small rituals create meaningful days.",
-    "image": "images/library/tea.webp",
-    "link": "https://link.amazon/B0huTrxly",
-    "button": "View"
+    "title":"Leuchtturm1917",
+
+    "category":"Writing",
+
+    "description":"Notebook.",
+
+    "image":"images/library/notebook.webp",
+
+    "link":"SEU_LINK",
+
+    "button":"Amazon"
+
   }
 ]
