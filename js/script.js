@@ -242,3 +242,41 @@ fetch("data/library.json")
     });
 
 });
+
+/* ==========================================
+   ARTICLES
+========================================== */
+
+fetch("data/articles.json")
+.then(response => response.json())
+.then(articles => {
+
+    const container = document.getElementById("articles-container");
+
+    if (!container) return;
+
+    articles.forEach(article => {
+
+        const card = document.createElement("article");
+
+        card.className = "card";
+
+        card.innerHTML = `
+            <img src="${article.image}" alt="${article.title}" loading="lazy">
+
+            <small>${article.category}</small>
+
+            <h3>${article.title}</h3>
+
+            <p>${article.description}</p>
+
+            <a href="${article.url}" class="button">
+                Read Essay
+            </a>
+        `;
+
+        container.appendChild(card);
+
+    });
+
+});
