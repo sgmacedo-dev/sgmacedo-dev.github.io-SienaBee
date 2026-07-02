@@ -936,22 +936,38 @@ color:var(--gold-dark);
 
 }
 
-<section id="quote">
+#quote{
 
-<div class="wrapper">
+padding:120px 0;
 
-<blockquote>
+background:#221E1B;
 
-"We become what we repeatedly give our attention to."
+color:white;
 
-</blockquote>
+text-align:center;
 
-<p>
+}
 
-— Siena Bee
+#quote blockquote{
 
-</p>
+font-size:2.4rem;
 
-</div>
+font-family:var(--font-title);
 
-</section>
+max-width:900px;
+
+margin:auto;
+
+line-height:1.5;
+
+}
+
+#quote p{
+
+margin-top:30px;
+
+color:#C7A75A;
+
+font-family:var(--font-ui);
+
+}
