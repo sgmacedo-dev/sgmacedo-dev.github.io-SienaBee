@@ -71,3 +71,25 @@
     --transition:.35s ease;
 
 }
+
+@media(max-width:900px){
+
+.study-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.study-image{
+
+order:1;
+
+}
+
+.study-text{
+
+order:2;
+
+}
+
+}
