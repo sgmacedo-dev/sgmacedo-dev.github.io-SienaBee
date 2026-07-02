@@ -188,3 +188,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ==========================================
+   DYNAMIC LIBRARY
+========================================== */
+
+fetch("data/library.json")
+
+.then(response => response.json())
+
+.then(items => {
+
+    const container = document.getElementById("library-container");
+
+    if(!container) return;
+
+    items.forEach(item => {
+
+        const card = document.createElement("article");
+
+        card.className = "card";
+
+        card.innerHTML = `
+
+            <img src="${item.image}"
+
+                 alt="${item.title}"
+
+                 loading="lazy">
+
+            <h3>${item.title}</h3>
+
+            <small>${item.category}</small>
+
+            <p>${item.description}</p>
+
+            <a href="${item.link}"
+
+               target="_blank"
+
+               rel="noopener noreferrer"
+
+               class="button">
+
+               ${item.button}
+
+            </a>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+});
