@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Kindle Paperwhite",
+    "category": "Reading",
+    "description": "My preferred companion for reading and research.",
+    "image": "images/library/kindle.webp",
+    "link": "https://www.amazon.com.br/dp/B0FDKR4RVP/ref=cm_sw_r_as_gl_apa_gl_i_EZT6MGAF3Y48EY6438E8?linkCode=ml1&tag=sgmacedo03-20",
+    "button": "View on Amazon"
+  },
+  {
+    "title": "Noise Cancelling Headphones",
+    "category": "Audio",
+    "description": "Silence is an indispensable tool for deep work.",
+    "image": "images/library/headphones.webp",
+    "link": "#",
+    "button": "View"
+  },
+  {
+    "title": "Fountain Pen",
+    "category": "Writing",
+    "description": "Writing slowly is thinking twice.",
+    "image": "images/library/fountainpen.webp",
+    "link": "#",
+    "button": "View"
+  },
+  {
+    "title": "Tea Ritual",
+    "category": "Slow Living",
+    "description": "Small rituals create meaningful days.",
+    "image": "images/library/tea.webp",
+    "link": "#",
+    "button": "View"
+  }
+]
