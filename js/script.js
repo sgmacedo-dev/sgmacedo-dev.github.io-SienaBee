@@ -199,11 +199,51 @@ fetch("data/library.json")
 
 .then(items => {
 
-    const container = document.getElementById("library-container");
+    const containers = {
 
-    if(!container) return;
+Books:document.getElementById("books-container"),
 
-    items.forEach(item => {
+Audio:document.getElementById("audio-container"),
+
+Writing:document.getElementById("writing-container"),
+
+Photography:document.getElementById("photo-container")
+
+};
+
+items.forEach(item=>{
+
+const card=document.createElement("article");
+
+card.className="card";
+
+card.innerHTML=`
+
+<img src="${item.image}" alt="${item.title}" loading="lazy">
+
+<h3>${item.title}</h3>
+
+<p>${item.description}</p>
+
+<a href="${item.link}"
+
+target="_blank"
+
+class="button">
+
+${item.button}
+
+</a>
+
+`;
+
+if(containers[item.category]){
+
+containers[item.category].appendChild(card);
+
+}
+
+});
 
         const card = document.createElement("article");
 
