@@ -856,3 +856,69 @@ color:var(--gold-dark);
 font-size:.82rem;
 
 }
+
+/* ==========================================================
+   THE STUDY
+========================================================== */
+
+#study{
+
+padding:140px 0;
+
+background:var(--surface);
+
+}
+
+.study-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.study-image img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:var(--shadow-large);
+
+transition:.5s;
+
+}
+
+.study-image img:hover{
+
+transform:scale(1.02);
+
+}
+
+.study-text h2{
+
+margin:20px 0 35px;
+
+}
+
+.study-text p{
+
+margin-bottom:25px;
+
+}
+
+.eyebrow{
+
+font-family:var(--font-ui);
+
+letter-spacing:4px;
+
+font-size:.85rem;
+
+color:var(--gold-dark);
+
+}
