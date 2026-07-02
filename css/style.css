@@ -820,3 +820,39 @@ color:var(--text);
 transform:translateY(-4px);
 
 }
+
+/* ==========================================================
+   LIBRARY IMAGES
+========================================================== */
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+margin-bottom:22px;
+
+}
+
+.card small{
+
+display:block;
+
+margin-bottom:15px;
+
+font-family:var(--font-ui);
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+color:var(--gold-dark);
+
+font-size:.82rem;
+
+}
