@@ -195,12 +195,25 @@ justify-content:center;
 
 align-items:center;
 
-text-align:center;
+background:
 
-background:url("../images/hero.webp") center center/cover no-repeat;
+linear-gradient(
+
+rgba(15,15,15,.45),
+
+rgba(15,15,15,.45)
+
+),
+
+url("../images/hero.webp");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
 
 }
-
 .hero-overlay{
 
 position:absolute;
