@@ -1,16 +1,27 @@
 /* Siena Bee Design System v1.0 */
 /* Foundation */
 :root{
-  --bg:#FAF7F2;
-  --surface:#FFF;
-  --text:#1B1816;
-  --muted:#6D7058;
-  --accent:#B56A3B;
-  --gold:#C7A75A;
-  --border:#E6DFD5;
-  --radius:14px;
-  --shadow:0 12px 30px rgba(0,0,0,.08);
-  --container:1200px;
+
+    --color-background:#FAF7F2;
+
+    --color-surface:#FFFFFF;
+
+    --color-text:#2F2B28;
+
+    --color-muted:#6F675F;
+
+    --color-accent:#8A6A3D;
+
+    --color-gold:#B08D57;
+
+    --color-border:#E7DED2;
+
+    --shadow-soft:0 12px 32px rgba(0,0,0,.06);
+
+    --radius:16px;
+
+    --content-width:1180px;
+
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -129,33 +140,62 @@ p{max-width:68ch;margin:1.25rem 0}
 }
 
 .button{
- display:inline-block;
- padding:.9rem 1.5rem;
- border:1px solid var(--gold);
- border-radius:999px;
-}
-.button:hover{background:var(--text);color:#fff}
 
-.button-secondary{background:transparent;color:var(--text)}
-.button-secondary:hover{background:var(--gold);color:#fff}
+    display:inline-block;
+
+    padding:.95rem 1.8rem;
+
+    border:1px solid var(--color-accent);
+
+    border-radius:999px;
+
+    background:var(--color-accent);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    font-size:.82rem;
+
+    transition:.35s ease;
+
+}
+
+.button:hover{
+
+    background:transparent;
+
+    color:var(--color-accent);
+
+}
 
 /* ==========================================================
    CARDS / CONTENT
 ========================================================== */
 .editorial-card{
- background:var(--surface);
- border:1px solid var(--border);
- border-radius:var(--radius);
- padding:2rem;
- box-shadow:var(--shadow);
- transition:.35s;
-}
-.editorial-card:hover{transform:translateY(-6px)}
 
-.grid{
- display:grid;
- gap:2rem;
- grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius);
+
+    padding:2.5rem;
+
+    box-shadow:var(--shadow-soft);
+
+    transition:.35s ease;
+
+}
+
+.editorial-card:hover{
+
+    transform:translateY(-6px);
+
 }
 
 #quiet-circle{background:#F4EEE5;text-align:center}
