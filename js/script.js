@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
     initStickyHeader();
     initBackToTop();
+    initActiveNavigation();
 });
 
 /* ==========================================================
