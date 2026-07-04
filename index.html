@@ -21,10 +21,11 @@
             </div>
         </a>
         <nav class="main-nav" aria-label="Primary">
-            <a href="#house">The House</a>
-            <a href="#featured">Essay</a>
-            <a href="#library">Library</a>
-            <a href="#letters">Letters</a>
+            <a href="about/" class="active">The House</a>
+            <!-- TODO: trocar para articles/philosophy/index.html quando houver mais de um ensaio -->
+            <a href="articles/philosophy/why-silence-matters.html">Essay</a>
+            <a href="library/">Library</a>
+            <a href="letters/">Letters</a>
             <a href="#quiet-circle">Quiet Circle</a>
         </nav>
     </div>
@@ -42,9 +43,9 @@
             Wisdom deserves careful words.
         </p>
         <div class="hero-actions">
-            <a class="button" href="#featured">Read the Featured Essay</a>
-            <a class="button button-secondary" href="#library">Visit the Library</a>
-            <a class="button button-secondary" href="#house">Enter the House</a>
+            <a class="button" href="articles/philosophy/why-silence-matters.html">Read the Featured Essay</a>
+            <a class="button button-secondary" href="library/">Visit the Library</a>
+            <a class="button button-secondary" href="about/">Enter the House</a>
         </div>
     </div>
 </section>
@@ -52,13 +53,12 @@
 <section id="house">
     <div class="container">
         <h2>The House</h2>
-        <p>Welcome.</p>
         <p>
             Siena Bee is not a blog.
             Nor is it merely a collection of articles.
             It is an editorial house dedicated to thoughtful living.
         </p>
-        <p>Here, every essay, every recommendation and every letter is published with intention.</p>
+        <p><a class="button" href="about/">Read the Full Story</a></p>
     </div>
 </section>
 
@@ -93,6 +93,9 @@
                 <p>Seneca</p>
             </article>
         </div>
+        <p style="text-align:center;margin-top:2rem">
+            <a class="button" href="library/">Visit the Full Library</a>
+        </p>
     </div>
 </section>
 
@@ -104,6 +107,7 @@
             Never hurried.
             Never written to chase attention.
         </p>
+        <a class="button" href="letters/">Read the Letters</a>
     </div>
 </section>
 
@@ -114,8 +118,6 @@
             If these pages have brought you a moment of peace,
             you are warmly invited to become part of the Quiet Circle.
         </p>
-        <!-- TODO: contact/index.html ainda não existe (roadmap: "planned").
-             Troque pelo destino real assim que a página de contato for publicada. -->
         <a href="contact/index.html" class="button">Join the Circle</a>
     </div>
 </section>
