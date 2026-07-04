@@ -1,0 +1,30 @@
+{
+  "name": "Siena Bee",
+  "short_name": "Siena Bee",
+  "description": "An editorial house devoted to philosophy, silence and slow living.",
+  "start_url": "/sgmacedo-dev.github.io-SienaBee/",
+  "scope": "/sgmacedo-dev.github.io-SienaBee/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAF7F2",
+  "theme_color": "#1B1816",
+  "lang": "en",
+  "categories": [
+    "books",
+    "lifestyle",
+    "education",
+    "philosophy"
+  ],
+  "icons": [
+    {
+      "src": "images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
