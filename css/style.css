@@ -320,3 +320,40 @@ footer{
     }
 
 }
+.hero-content{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+    margin-top:2.5rem;
+
+    flex-wrap:wrap;
+
+}
+
+.button-secondary{
+
+    background:transparent;
+
+    color:var(--color-text);
+
+}
+
+.button-secondary:hover{
+
+    background:var(--color-gold);
+
+    color:white;
+
+}
