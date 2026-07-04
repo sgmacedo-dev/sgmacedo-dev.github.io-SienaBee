@@ -248,3 +248,88 @@ footer{
     color:var(--color-accent);
 
 }
+/* ==========================================================
+   EDITORIAL TYPOGRAPHY
+========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    line-height:1.9;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+h1,h2,h3{
+
+    font-weight:400;
+
+    line-height:1.2;
+
+    letter-spacing:.02em;
+
+}
+
+h1{
+
+    font-size:clamp(2.8rem,6vw,4.8rem);
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+}
+
+h3{
+
+    font-size:1.45rem;
+
+}
+
+p{
+
+    max-width:68ch;
+
+    margin:0 auto 1.5rem;
+
+}
+
+main section{
+
+    padding:7rem 0;
+
+}
+
+hr{
+
+    width:90px;
+
+    margin:3rem auto;
+
+    border:none;
+
+    border-top:1px solid rgba(176,141,87,.35);
+
+}
+
+.button{
+
+    transition:.35s ease;
+
+}
+
+.button:hover{
+
+    transform:translateY(-2px);
+
+}
