@@ -194,3 +194,56 @@ footer{
  text-align:center;
  color:var(--muted);
 }
+/* ==========================================================
+   THE HOUSE
+========================================================== */
+
+.narrow{
+
+    max-width:760px;
+
+}
+
+.section-kicker{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    letter-spacing:.30rem;
+
+    color:var(--color-accent);
+
+    font-size:.82rem;
+
+    margin-bottom:1rem;
+
+}
+
+#house h2{
+
+    text-align:center;
+
+    margin-bottom:3rem;
+
+}
+
+.drop-cap{
+
+    font-size:1.5rem;
+
+}
+
+.drop-cap::first-letter{
+
+    float:left;
+
+    font-size:4rem;
+
+    line-height:.8;
+
+    padding-right:.5rem;
+
+    color:var(--color-accent);
+
+}
