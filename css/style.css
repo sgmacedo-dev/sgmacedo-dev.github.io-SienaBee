@@ -373,3 +373,28 @@ hr{
     transform:translateY(-2px);
 
 }
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.motto{
+
+    font-size:.9rem;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+
+    color:var(--color-accent);
+
+    margin-bottom:.75rem;
+
+}
+
+.footer-subtitle{
+
+    color:var(--color-muted);
+
+    font-size:.92rem;
+
+}
