@@ -26,13 +26,13 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
-  color:var(--text);
+  background:var(--color-background);
+  color:var(--color-text);
   font:16px/1.8 Georgia,"Times New Roman",serif;
 }
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit;transition:.3s}
-.container{width:min(92%,var(--container));margin:auto}
+.container{width:min(92%,var(--content-width));margin:auto}
 section{padding:7rem 0}
 section h2{text-align:center;margin-bottom:3rem}
 h1,h2,h3{font-weight:400;line-height:1.2}
