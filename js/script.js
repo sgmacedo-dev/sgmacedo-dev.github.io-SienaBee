@@ -1,43 +1,81 @@
 /* ==========================================================
    SIENA BEE
    Main JavaScript
-   Version 1.0
+   Version 2.0
 ========================================================== */
 
 "use strict";
 
 /* ==========================================================
-   Inicialização
+   INITIALIZATION
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+
     initSmoothScroll();
+
     initStickyHeader();
+
     initBackToTop();
-    initActiveNavigation();
+
+    initReadingProgress();
+
+    initFadeIn();
+
+    initCurrentPage();
+
 });
 
 /* ==========================================================
-   Rolagem suave
+   UTILITIES
 ========================================================== */
 
-function initSmoothScroll() {
+function $(selector){
 
-    const links = document.querySelectorAll('a[href^="#"]');
+    return document.querySelector(selector);
 
-    links.forEach(link => {
+}
 
-        link.addEventListener("click", (event) => {
+function $$(selector){
 
-            const target = document.querySelector(link.getAttribute("href"));
+    return document.querySelectorAll(selector);
 
-            if (!target) return;
+}
+
+function prefersReducedMotion(){
+
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+}
+
+/* ==========================================================
+   SMOOTH SCROLL
+========================================================== */
+
+function initSmoothScroll(){
+
+    $$('a[href^="#"]').forEach(link=>{
+
+        link.addEventListener("click",(event)=>{
+
+            const href=link.getAttribute("href");
+
+            if(!href || href==="#") return;
+
+            const target=$(href);
+
+            if(!target) return;
 
             event.preventDefault();
 
             target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+
+                behavior: prefersReducedMotion()
+                    ? "auto"
+                    : "smooth",
+
+                block:"start"
+
             });
 
         });
@@ -47,64 +85,122 @@ function initSmoothScroll() {
 }
 
 /* ==========================================================
-   Cabeçalho Inteligente
+   STICKY HEADER
 ========================================================== */
 
-function initStickyHeader() {
+function initStickyHeader(){
 
-    const header = document.querySelector(".site-header");
+    const header=$(".site-header");
 
-    if (!header) return;
+    if(!header) return;
 
-    window.addEventListener("scroll", () => {
+    let ticking=false;
 
-        if (window.scrollY > 25) {
+    function update(){
+
+        if(window.scrollY>25){
+
             header.classList.add("is-scrolled");
-        } else {
+
+        }else{
+
             header.classList.remove("is-scrolled");
+
+        }
+
+        ticking=false;
+
+    }
+
+    window.addEventListener("scroll",()=>{
+
+        if(!ticking){
+
+            window.requestAnimationFrame(update);
+
+            ticking=true;
+
         }
 
     });
 
+    update();
+
 }
 
 /* ==========================================================
-   Botão Voltar ao Topo
+   READING PROGRESS
 ========================================================== */
 
-function initBackToTop() {
+function initReadingProgress(){
 
-    const button = document.createElement("button");
+    const progress=$(".reading-progress");
 
-    button.innerHTML = "↑";
+    if(!progress) return;
 
-    button.className = "back-to-top";
+    function updateProgress(){
 
-    button.setAttribute("aria-label", "Back to top");
+        const scrollTop=window.scrollY;
+
+        const documentHeight=document.documentElement.scrollHeight-window.innerHeight;
+
+        const percentage=documentHeight>0
+            ? (scrollTop/documentHeight)*100
+            : 0;
+
+        progress.style.width=`${percentage}%`;
+
+    }
+
+    window.addEventListener("scroll",updateProgress);
+
+    updateProgress();
+
+}
+
+/* ==========================================================
+   BACK TO TOP
+========================================================== */
+
+function initBackToTop(){
+
+    const button=document.createElement("button");
+
+    button.className="back-to-top";
+
+    button.textContent="↑";
+
+    button.setAttribute("aria-label","Back to top");
 
     document.body.appendChild(button);
 
-    window.addEventListener("scroll", () => {
+    function updateButton(){
 
-        if (window.scrollY > 500) {
+        if(window.scrollY>500){
 
             button.classList.add("visible");
 
-        } else {
+        }else{
 
             button.classList.remove("visible");
 
         }
 
-    });
+    }
 
-    button.addEventListener("click", () => {
+    window.addEventListener("scroll",updateButton);
+
+    updateButton();
+
+    button.addEventListener("click",()=>{
 
         window.scrollTo({
 
-            top: 0,
+            top:0,
 
-            behavior: "smooth"
+            behavior:prefersReducedMotion()
+                ? "auto"
+                : "smooth"
 
         });
 
@@ -113,59 +209,129 @@ function initBackToTop() {
 }
 
 /* ==========================================================
-   Observador de Seções
+   FADE IN ON SCROLL
 ========================================================== */
 
-function initActiveNavigation() {
+function initFadeIn(){
 
-    const sections = document.querySelectorAll("section[id]");
+    const elements=$$(`
+        .editorial-card,
+        blockquote,
+        .essay h2
+    `);
 
-    const links = document.querySelectorAll(".main-nav a");
+    if(!elements.length) return;
 
-    if (!sections.length || !links.length) return;
+    const observer=new IntersectionObserver((entries)=>{
 
-    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry=>{
 
-        entries.forEach((entry) => {
+            if(entry.isIntersecting){
 
-            if (!entry.isIntersecting) return;
+                entry.target.classList.add("visible");
 
-            const id = entry.target.id;
+                observer.unobserve(entry.target);
 
-            links.forEach((link) => {
-
-                link.classList.remove("active");
-
-                if (link.getAttribute("href") === "#" + id) {
-
-                    link.classList.add("active");
-
-                }
-
-            });
+            }
 
         });
 
-    }, {
+    },{
 
-        threshold: 0.45
+        threshold:.15
 
     });
 
-    sections.forEach(section => observer.observe(section));
+    elements.forEach(element=>{
+
+        element.classList.add("fade-in");
+
+        observer.observe(element);
+
+    });
 
 }
 
 /* ==========================================================
-   Preparação para futuras integrações
+   CURRENT PAGE
 ========================================================== */
 
-// Biblioteca (JSON)
-// Newsletter
-// reCAPTCHA v3
-// Pesquisa
-// Quiet Circle
-// Amazon API
-// Spotify Embed
+function initCurrentPage(){
 
-console.log("🐝 Siena Bee carregado com sucesso.");
+    const currentPath=window.location.pathname
+        .replace(/index\.html$/,"")
+        .replace(/\/$/,"");
+
+    const links=$$(".main-nav a");
+
+    links.forEach(link=>{
+
+        const href=link.getAttribute("href");
+
+        if(!href || href.startsWith("#")) return;
+
+        const linkPath=new URL(href,window.location.origin)
+            .pathname
+            .replace(/index\.html$/,"")
+            .replace(/\/$/,"");
+
+        if(linkPath===currentPath){
+
+            link.classList.add("active");
+
+        }else{
+
+            link.classList.remove("active");
+
+        }
+
+    });
+
+}
+
+/* ==========================================================
+   DEVELOPMENT
+========================================================== */
+
+const DEV=false;
+
+if(DEV){
+
+    console.log("🐝 Siena Bee Development Mode");
+
+}
+
+/* ==========================================================
+   FUTURE INTEGRATIONS
+========================================================== */
+
+/*
+
+Planned modules
+
+✓ Quiet Circle
+
+✓ Search
+
+✓ Library JSON
+
+✓ Spotify playlists
+
+✓ Amazon Affiliates
+
+✓ Contact Form
+
+✓ Newsletter
+
+✓ Reading Statistics
+
+✓ Dark Mode
+
+✓ Language Switcher
+
+*/
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
+
