@@ -1,9 +1,11 @@
 /* ==========================================================
-   SIENA BEE DESIGN SYSTEM v2.0
+   SIENA BEE DESIGN SYSTEM v3.0
    Foundation
 ========================================================== */
 
 :root{
+
+    /* Palette */
 
     --color-background:#FAF7F2;
     --color-surface:#FFFFFF;
@@ -16,11 +18,13 @@
 
     --color-border:#E7DED2;
 
-    --shadow-soft:0 12px 32px rgba(0,0,0,.06);
+    /* Layout */
 
     --radius:16px;
 
     --content-width:1180px;
+
+    --shadow-soft:0 12px 32px rgba(0,0,0,.06);
 
     /* Compatibility aliases */
 
@@ -91,13 +95,21 @@ a{
 
     text-decoration:none;
 
-    transition:.3s;
+    transition:.3s ease;
 
 }
 
 .container{
 
     width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+.narrow{
+
+    max-width:760px;
 
     margin:auto;
 
@@ -167,12 +179,6 @@ main section{
 
 }
 
-.narrow{
-
-    max-width:760px;
-
-}
-
 /* ==========================================================
    HEADER
 ========================================================== */
@@ -185,11 +191,13 @@ main section{
 
     z-index:1000;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
     background:rgba(250,247,242,.94);
 
     border-bottom:1px solid var(--border);
+
+    transition:box-shadow .3s ease;
 
 }
 
@@ -247,7 +255,7 @@ main section{
 
     display:block;
 
-    margin-top:3px;
+    margin-top:4px;
 
     color:var(--muted);
 
@@ -260,10 +268,6 @@ main section{
     display:flex;
 
     gap:2rem;
-
-    justify-content:center;
-
-    padding:1rem 0;
 
 }
 
@@ -309,26 +313,6 @@ main section{
 
 }
 
-@media(max-width:900px){
-
-.header-container{
-
-    flex-direction:column;
-
-    padding:1.2rem 0;
-
-}
-
-.main-nav{
-
-    flex-direction:column;
-
-    gap:1rem;
-
-}
-
-}
-
 /* ==========================================================
    HERO
 ========================================================== */
@@ -346,16 +330,24 @@ main section{
     text-align:center;
 
     background:
-        linear-gradient(rgba(250,247,242,.82),rgba(250,247,242,.82)),
-        url("../images/hero.jpg") center center/cover no-repeat;
+
+        linear-gradient(
+
+            rgba(250,247,242,.82),
+
+            rgba(250,247,242,.82)
+
+        ),
+
+        url("../images/hero.jpg")
+
+        center center/cover no-repeat;
 
 }
 
 .hero-content{
 
     max-width:760px;
-
-    margin:auto;
 
 }
 
@@ -364,7 +356,7 @@ main section{
 
     text-transform:uppercase;
 
-    letter-spacing:.30rem;
+    letter-spacing:.32rem;
 
     color:var(--accent);
 
@@ -432,17 +424,17 @@ main section{
 
     text-transform:uppercase;
 
-    transition:.35s ease;
+    transition:all .3s ease;
 
 }
 
 .button:hover{
 
-    transform:translateY(-2px);
-
     background:transparent;
 
     color:var(--accent);
+
+    transform:translateY(-2px);
 
 }
 
@@ -474,10 +466,12 @@ main section{
 
     gap:2rem;
 
+    align-items:start;
+
 }
 
 /* ==========================================================
-   CARDS
+   EDITORIAL CARDS
 ========================================================== */
 
 .editorial-card{
@@ -492,13 +486,17 @@ main section{
 
     box-shadow:var(--shadow);
 
-    transition:.35s ease;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
 
 .editorial-card:hover{
 
     transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
 
 }
 
@@ -515,7 +513,7 @@ main section{
 }
 
 /* ==========================================================
-   HOUSE
+   THE HOUSE
 ========================================================== */
 
 #house h2{
@@ -532,9 +530,9 @@ main section{
 
     font-size:4rem;
 
-    line-height:.82;
+    line-height:.8;
 
-    padding-right:.5rem;
+    padding-right:.45rem;
 
     color:var(--accent);
 
@@ -560,13 +558,141 @@ main section{
 
 }
 
+.essay h1{
+
+    margin-bottom:1rem;
+
+}
+
 .essay-subtitle{
 
     color:var(--muted);
 
     font-style:italic;
 
-    text
+    text-align:center;
+
+    margin-bottom:2rem;
+
+}
+
+.essay-meta{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:.95rem;
+
+    margin-bottom:2rem;
+
+}
+
+.essay p{
+
+    text-align:justify;
+
+    margin-bottom:1.75rem;
+
+}
+
+.essay h2{
+
+    text-align:left;
+
+    margin-top:4rem;
+
+    margin-bottom:1.5rem;
+
+}
+
+.essay h3{
+
+    margin-top:3rem;
+
+    margin-bottom:1rem;
+
+}
+
+.essay footer{
+
+    margin-top:5rem;
+
+    text-align:center;
+
+}
+
+.signature{
+
+    margin-top:2rem;
+
+    font-style:italic;
+
+}
+
+.signature strong{
+
+    display:block;
+
+    margin-top:.75rem;
+
+    font-style:normal;
+
+    letter-spacing:.08em;
+
+}
+
+/* ==========================================================
+   BLOCKQUOTE
+========================================================== */
+
+blockquote{
+
+    margin:3rem 0;
+
+    padding:0 0 0 1.5rem;
+
+    border-left:3px solid var(--gold);
+
+    color:var(--muted);
+
+    font-style:italic;
+
+    font-size:1.12rem;
+
+    line-height:1.8;
+
+}
+
+blockquote footer{
+
+    margin-top:1rem;
+
+    font-size:.92rem;
+
+    font-style:normal;
+
+}
+
+/* ==========================================================
+   EDITOR NOTE
+========================================================== */
+
+.editor-note{
+
+    margin-top:5rem;
+
+    padding:2rem;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    text-align:center;
+
+}
 
 /* ==========================================================
    QUIET CIRCLE
@@ -594,17 +720,25 @@ main section{
 
     width:min(92%,var(--container));
 
-    margin:2rem auto 0;
-
-    font-size:.9rem;
+    margin:2rem auto;
 
     color:var(--muted);
+
+    font-size:.9rem;
 
 }
 
 .breadcrumb a{
 
     color:var(--muted);
+
+    transition:color .3s ease;
+
+}
+
+.breadcrumb a:hover{
+
+    color:var(--accent);
 
 }
 
@@ -654,6 +788,12 @@ main section{
 
     height:46px;
 
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     border:none;
 
     border-radius:50%;
@@ -672,7 +812,11 @@ main section{
 
     transform:translateY(12px);
 
-    transition:.3s;
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
 
     z-index:1000;
 
@@ -718,11 +862,11 @@ footer{
 
     margin:.75rem 0;
 
-    letter-spacing:.28em;
+    color:var(--accent);
 
     text-transform:uppercase;
 
-    color:var(--accent);
+    letter-spacing:.28em;
 
     font-size:.9rem;
 
@@ -744,4 +888,214 @@ footer{
 
 }
 
-.mb
+.mb-0{
+
+    margin-bottom:0;
+
+}
+
+.mb-1{
+
+    margin-bottom:1rem;
+
+}
+
+.mb-2{
+
+    margin-bottom:2rem;
+
+}
+
+.mt-1{
+
+    margin-top:1rem;
+
+}
+
+.mt-2{
+
+    margin-top:2rem;
+
+}
+
+.mt-3{
+
+    margin-top:3rem;
+
+}
+
+.mt-4{
+
+    margin-top:4rem;
+
+}
+
+/* ==========================================================
+   FADE IN
+========================================================== */
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(24px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+}
+
+.fade-in.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+    .header-container{
+
+        flex-direction:column;
+
+        padding:1.5rem 0;
+
+    }
+
+    .main-nav{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:1rem;
+
+        margin-top:1rem;
+
+    }
+
+    .hero{
+
+        min-height:70vh;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        width:94%;
+
+    }
+
+    main section{
+
+        padding:5rem 0;
+
+    }
+
+    h1{
+
+        font-size:2.5rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    .hero{
+
+        min-height:60vh;
+
+    }
+
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .button{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+    }
+
+    .editorial-card{
+
+        padding:2rem;
+
+    }
+
+    .drop-cap::first-letter{
+
+        font-size:3rem;
+
+    }
+
+    blockquote{
+
+        padding-left:1rem;
+
+        font-size:1rem;
+
+    }
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+    .fade-in{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================================
+   END OF SIENA BEE DESIGN SYSTEM
+========================================================== */
