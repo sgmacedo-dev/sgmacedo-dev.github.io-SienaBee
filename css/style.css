@@ -100,12 +100,17 @@ p{
    HEADER
 ========================================================== */
 .site-header{
- position:sticky;top:0;z-index:1000;
- backdrop-filter:blur(10px);
- background:rgba(250,247,242,.94);
- border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(250,247,242,.94);
+    border-bottom:1px solid var(--color-border);
 }
-.site-header.is-scrolled{box-shadow:var(--shadow)}
+
+.site-header.is-scrolled{
+    box-shadow:var(--shadow-soft);
+}
 
 .header-container{
     display:flex;
@@ -129,18 +134,22 @@ p{
 }
 
 .brand-title{display:block;font-size:1.15rem;letter-spacing:.18em}
-.brand-subtitle{display:block;color:var(--muted);font-size:.82rem;margin-top:3px}
+.brand-subtitle{
+    color:var(--color-muted);
+font-size:.82rem;margin-top:3px}
 
 .main-nav{display:flex;justify-content:center;gap:2rem;padding:1rem 0}
 .main-nav a{position:relative;padding-bottom:.35rem}
-.main-nav a:hover,.main-nav a.active{color:var(--accent)}
-
+.main-nav a:hover,
+.main-nav a.active{
+    color:var(--color-accent);
+}
 .main-nav a::after{
     content:"";
     position:absolute;
     left:0;bottom:0;
     width:0;height:1px;
-    background:var(--accent);
+    background:var(--color-accent);
     transition:.35s;
 }
 .main-nav a:hover::after,.main-nav a.active::after{width:100%}
