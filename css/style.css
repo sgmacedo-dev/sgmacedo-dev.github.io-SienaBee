@@ -566,3 +566,27 @@ hr{
     font-size:.82rem;
 
 }
+
+/* ==========================================================
+   ESSAY HEADER
+========================================================== */
+
+.essay-header{
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+.essay-issue{
+    color:var(--color-muted);
+    font-size:.9rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+}
+
+.essay-subtitle{
+    max-width:42rem;
+    margin:1.5rem auto 0;
+    color:var(--color-muted);
+    font-style:italic;
+}
