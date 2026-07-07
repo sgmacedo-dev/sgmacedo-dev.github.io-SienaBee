@@ -57,6 +57,13 @@
 
 }
 
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
 html{
 
     scroll-behavior:smooth;
@@ -78,14 +85,6 @@ body{
     text-rendering:optimizeLegibility;
 
     -webkit-font-smoothing:antialiased;
-
-}
-
-img{
-
-    display:block;
-
-    max-width:100%;
 
 }
 
@@ -639,38 +638,6 @@ main section{
     font-style:normal;
 
     letter-spacing:.08em;
-
-}
-
-/* ==========================================================
-   BLOCKQUOTE
-========================================================== */
-
-blockquote{
-
-    margin:3rem 0;
-
-    padding:0 0 0 1.5rem;
-
-    border-left:3px solid var(--gold);
-
-    color:var(--muted);
-
-    font-style:italic;
-
-    font-size:1.12rem;
-
-    line-height:1.8;
-
-}
-
-blockquote footer{
-
-    margin-top:1rem;
-
-    font-size:.92rem;
-
-    font-style:normal;
 
 }
 
@@ -1258,30 +1225,6 @@ blockquote cite{
         margin:3rem 1rem;
 
     }
-
-}
-
-/* ==========================================================
-   FADE IN
-========================================================== */
-
-.fade-in{
-
-    opacity:0;
-
-    transform:translateY(24px);
-
-    transition:
-        opacity .6s ease,
-        transform .6s ease;
-
-}
-
-.fade-in.visible{
-
-    opacity:1;
-
-    transform:translateY(0);
 
 }
 
