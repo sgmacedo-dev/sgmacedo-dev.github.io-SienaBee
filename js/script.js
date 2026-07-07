@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initBackToTop();
 
-    initActiveNavigation();
-
     initReadingProgress();
 
     initFadeIn();
+
+    initActiveNavigation();
+
+    highlightCurrentPage();
 
 });
 
@@ -129,3 +131,196 @@ function initBackToTop(){
     });
 
 }
+
+/* ==========================================================
+   Reading Progress
+========================================================== */
+
+function initReadingProgress(){
+
+    const progress=document.querySelector(".reading-progress");
+
+    if(!progress) return;
+
+    window.addEventListener("scroll",()=>{
+
+        const scrollTop=window.scrollY;
+
+        const documentHeight=
+            document.documentElement.scrollHeight-window.innerHeight;
+
+        const percentage=(scrollTop/documentHeight)*100;
+
+        progress.style.width=percentage+"%";
+
+    });
+
+}
+
+/* ==========================================================
+   Fade In
+========================================================== */
+
+function initFadeIn(){
+
+    const elements=document.querySelectorAll(
+
+        ".editorial-card, .essay p, .essay h2, .essay h3, blockquote"
+
+    );
+
+    if(!elements.length) return;
+
+    elements.forEach(element=>{
+
+        element.classList.add("fade-in");
+
+    });
+
+    const observer=new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },{
+
+        threshold:.15,
+
+        rootMargin:"0px 0px -80px 0px"
+
+    });
+
+    elements.forEach(element=>{
+
+        observer.observe(element);
+
+    });
+
+}
+
+/* ==========================================================
+   Active Navigation
+========================================================== */
+
+function initActiveNavigation(){
+
+    const sections=document.querySelectorAll("section[id]");
+
+    const links=document.querySelectorAll(".main-nav a");
+
+    if(!sections.length || !links.length) return;
+
+    const observer=new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(!entry.isIntersecting) return;
+
+            const id=entry.target.id;
+
+            links.forEach(link=>{
+
+                link.classList.remove("active");
+
+                const href=link.getAttribute("href");
+
+                if(href===`#${id}`){
+
+                    link.classList.add("active");
+
+                }
+
+            });
+
+        });
+
+    },{
+
+        threshold:.45
+
+    });
+
+    sections.forEach(section=>observer.observe(section));
+
+}
+
+/* ==========================================================
+   Current Page
+========================================================== */
+
+function highlightCurrentPage(){
+
+    const current=window.location.pathname;
+
+    const links=document.querySelectorAll(".main-nav a");
+
+    links.forEach(link=>{
+
+        const href=link.getAttribute("href");
+
+        if(!href) return;
+
+        if(href.startsWith("#")) return;
+
+        if(current.endsWith(href) || current.includes(href)){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+/* ==========================================================
+   Future Modules
+========================================================== */
+
+const SienaBee={
+
+    library:null,
+
+    newsletter:null,
+
+    search:null,
+
+    spotify:null,
+
+    amazon:null,
+
+    analytics:null
+
+};
+
+/* ==========================================================
+   Console Signature
+========================================================== */
+
+console.log(`
+
+═══════════════════════════════════════════════
+
+            THE SIENA BEE
+
+        A HOUSE OF THOUGHT
+
+═══════════════════════════════════════════════
+
+Version 2.0
+
+Editorial House loaded successfully.
+
+Sapientia · Veritas · Libertas
+
+═══════════════════════════════════════════════
+
+`);
