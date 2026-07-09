@@ -116,6 +116,23 @@ a{
 
 }
 
+.skip-link{
+    position:absolute;
+    left:-9999px;
+    top:auto;
+}
+
+.skip-link:focus{
+    left:20px;
+    top:20px;
+    padding:12px 18px;
+    background:#fff;
+    color:var(--accent);
+    border:1px solid var(--accent);
+    border-radius:8px;
+    z-index:3000;
+}
+
 /* ==========================================================
    TYPOGRAPHY
 ========================================================== */
