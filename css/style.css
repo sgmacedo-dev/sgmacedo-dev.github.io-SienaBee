@@ -324,7 +324,7 @@ main section{
     background:var(--bg);
 
     position:sticky;
-    top:90px;
+    top:72px;
     z-index:900;
 }
 
@@ -370,7 +370,7 @@ main section{
 
     justify-content:center;
 
-    min-height:92vh;
+    min-height:100svh;
 
     text-align:center;
 
@@ -1307,8 +1307,9 @@ blockquote cite{
     }
 
     .brand{
+        width:100%;
         justify-content:center;
-    }
+}
 
     .hero{
 
