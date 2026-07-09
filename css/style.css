@@ -314,7 +314,7 @@ main section{
 
 .prime-banner{
     max-width:1100px;
-    margin:20px auto;
+    margin:0 auto 2rem;
     padding:18px 24px;
     text-align:center;
     border:1px solid #d9c8a3;
@@ -322,11 +322,14 @@ main section{
     background:#faf7f2;
 }
 
-.prime-banner p{
-    margin:0 0 10px;
-    font-family:Georgia,serif;
-    font-size:1rem;
-    color:#5a4a32;
+.prime-banner{
+    max-width:1100px;
+    margin:0 auto 2rem;
+    padding:18px 24px;
+    text-align:center;
+    border:1px solid #d9c8a3;
+    border-radius:12px;
+    background:#faf7f2;
 }
 
 .prime-banner a{
@@ -341,7 +344,8 @@ main section{
 }
 
 .prime-banner a:hover{
-    opacity:.9;
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
 }
 
 /* ==========================================================
