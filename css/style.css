@@ -314,6 +314,31 @@ main section{
 
 }
 
+/* BRAND RESPONSIVE */
+
+@media (max-width:900px){
+
+    .header-container{
+        flex-direction:column;
+        justify-content:center;
+        gap:1rem;
+        padding:1.5rem 0;
+    }
+
+    .brand{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .main-nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:1rem;
+    }
+
+}
+
 .prime-banner{
     max-width:1100px;
     margin:0 auto 2rem;
@@ -1303,8 +1328,8 @@ blockquote cite{
     }
 
     .main-nav{
-        display:none;
-    }
+        display:flex;
+}
 
     .brand{
         width:100%;
