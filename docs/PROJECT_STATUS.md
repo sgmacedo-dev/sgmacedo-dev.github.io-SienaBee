@@ -21,6 +21,7 @@
 | Amazon Prime banner | Discreet placement on **home, library, shop** only |
 | Contact | Mailto CTA; form endpoint deferred |
 | AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
+| Library/Shop Amazon links | `href="#"` + `data-affiliate-placeholder="pending-asin"` until real ASINs/tag |
 | Legal | `/legal/` privacy, terms, cookies, affiliate disclosure (informational templates) |
 
 ---
@@ -59,7 +60,7 @@
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
-2. Amazon Associates tag confirmation (replace/verify `amzn.to` short link)
+2. Amazon Associates tag + real ASINs (replace `href="#"` / `pending-asin` placeholders; verify `amzn.to` Prime link)
 3. Working inboxes: `hello@sienabee.com`, `partnerships@sienabee.com`
 4. Author bio text & photo for About / Editor’s Desk
 5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
