@@ -21,7 +21,7 @@
 | Amazon Prime banner | Discreet placement on **home, library, shop** only |
 | Contact | Mailto CTA; form endpoint deferred |
 | AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
-| Library/Shop Amazon links | `href="#"` + `data-affiliate-placeholder="pending-asin"` until real ASINs/tag |
+| Library/Shop Amazon links | `.affiliate-cta` + `data-asin="YOUR_ASIN"` + tag `YOUR_ASSOCIATE_TAG` in `js/script.js` until Silvana confirms |
 | Legal | `/legal/` privacy, terms, cookies, affiliate disclosure (informational templates) |
 
 ---
@@ -45,14 +45,19 @@
 
 ---
 
-## P1+ (next)
+## P1 done (2026-09-27)
+
+- [x] JSON-LD via shared helper in `js/script.js` (`initSchema`): Organization + WebSite on all pages that load the script; Article when `og:type=article`; BreadcrumbList from canonical path. **No SearchAction** (no on-site search yet).
+- [x] Accessible mobile nav: `.nav-toggle` injected when `.main-nav` exists; `aria-expanded`, Escape / outside-click / link close; CSS panel ≤900px (nav was previously `display:none` with no toggle).
+- [x] Affiliate components: `.affiliate-cta` / `.affiliate-card` / `.affiliate-disclosure-note`; Library + Shop wired with `data-asin="YOUR_ASIN"` placeholders; tag stays `YOUR_ASSOCIATE_TAG` in `SienaBee.amazon` (see `docs/AFFILIATE.md` + `docs/snippets/affiliate-card.html`).
+- [x] Disclosure note visible above product grids on Library/Shop; links use correct `../legal/affiliate-disclosure/` depth.
+
+## P2+ (next)
 
 - Unify nav IA across all templates
 - Single canonical for *As Time Goes By* (prefer flat `.html`; redirect or drop nested duplicate)
-- Schema.org JSON-LD
-- Expand Amazon product links with real Associates tag (Silvana)
+- Expand Amazon product links with real Associates tag + ASINs (Silvana) — see `docs/AFFILIATE.md`
 - Accessibility / Lighthouse pass
-- Optional mobile nav toggle
 - Quiet Circle newsletter provider
 
 ---
@@ -60,7 +65,7 @@
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
-2. Amazon Associates tag + real ASINs (replace `href="#"` / `pending-asin` placeholders; verify `amzn.to` Prime link)
+2. Amazon Associates tag + real ASINs — set `SienaBee.amazon.associateTag` and each `data-asin` (see `docs/AFFILIATE.md`). Teammate note `4bee-20` is **unverified**. Verify `amzn.to` Prime link.
 3. Working inboxes: `hello@sienabee.com`, `partnerships@sienabee.com`
 4. Author bio text & photo for About / Editor’s Desk
 5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
@@ -79,6 +84,15 @@
 5. **Never commit secrets**; site keys that Google marks public may live in HTML.
 
 ---
+
+
+### How to add Amazon Associates later
+
+1. Confirm the tracking tag in Amazon Associates Central (do **not** assume `4bee-20`).
+2. Set `associateTag` in `js/script.js` → `SienaBee.amazon`.
+3. Replace each `data-asin="YOUR_ASIN"` on `library/index.html` and `shop/index.html`.
+4. Optional: copy `docs/snippets/affiliate-card.html` for new cards.
+5. Smoke-test one CTA and the Affiliate Disclosure link from Library and Shop.
 
 ## Deploy
 
