@@ -654,14 +654,13 @@ function initSchema(){
 }
 
 /* ==========================================================
-   Amazon Affiliate placeholders
-   Tag/ASINs: Silvana fills YOUR_ASSOCIATE_TAG / YOUR_ASIN.
-   Unverified teammate note: 4bee-20 — do NOT hardcode until confirmed.
+   Amazon Affiliate
+   Tag confirmed (Silvana): 4bee-20 (Social Media Associates tag).
+   ASINs still pending — keep data-asin="YOUR_ASIN" until Silvana supplies.
 ========================================================== */
 
 SienaBee.amazon = {
-    /* Replace with real Associates tag when Silvana confirms (e.g. yourtag-20) */
-    associateTag: "YOUR_ASSOCIATE_TAG",
+    associateTag: "4bee-20",
     marketplace: "www.amazon.com",
     disclosurePath: "legal/affiliate-disclosure/"
 };
@@ -748,7 +747,7 @@ function initAffiliatePlaceholders(){
             el.setAttribute("href", "#");
             el.setAttribute("aria-disabled", "true");
             el.classList.add("is-pending");
-            el.setAttribute("title", "Configure ASIN and Associates tag — see docs/AFFILIATE.md");
+            el.setAttribute("title", "Configure ASIN — see docs/AFFILIATE.md");
             if(/view at amazon/i.test(el.textContent.trim())){
                 el.textContent = "Configure ASIN";
             }

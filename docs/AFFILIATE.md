@@ -1,31 +1,30 @@
-# Amazon Affiliate — how Silvana fills tags & ASINs
+# Amazon Affiliate — how Silvana fills ASINs
 
-**Status:** placeholders only. Do **not** invent ASINs or Associate tags.  
-**Unverified teammate note:** `4bee-20` may be the Associates tag — treat as **unverified** until Silvana confirms in Amazon Associates.
+**Status:** Associates tag is set to **`4bee-20`** (confirmed by Silvana; Social Media tag).  
+**ASINs:** still pending Silvana — keep `data-asin="YOUR_ASIN"`; do **not** invent ASINs.
 
 Live Pages base (canonical until custom domain):  
 `https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/`
 
 ---
 
-## 1. Set the Associates tag (one place)
+## 1. Associates tag (done)
 
-In `js/script.js`, find:
+In `js/script.js`:
 
 ```js
 SienaBee.amazon = {
-    associateTag: "YOUR_ASSOCIATE_TAG",
+    associateTag: "4bee-20",
     marketplace: "www.amazon.com",
     disclosurePath: "legal/affiliate-disclosure/"
 };
 ```
 
-Replace `YOUR_ASSOCIATE_TAG` with the real tag (e.g. `yourtag-20`) **only after confirmation**.  
-Also mirror the value in `.env.example` / local `.env` as `AMAZON_ASSOCIATE_TAG=` for documentation (Pages does not read `.env`).
+Documented mirror: `.env.example` → `AMAZON_ASSOCIATE_TAG=4bee-20` (Pages does not read `.env`).
 
 ---
 
-## 2. Set each product ASIN
+## 2. Set each product ASIN (pending Silvana)
 
 Library and Shop CTAs use:
 
@@ -41,9 +40,9 @@ Library and Shop CTAs use:
 ```
 
 Replace `YOUR_ASIN` on each product with the real Amazon ASIN (10 characters).  
-When **both** tag and ASIN are real, `initAffiliatePlaceholders()` rewrites `href` to:
+When the ASIN is real, `initAffiliatePlaceholders()` rewrites `href` to:
 
-`https://www.amazon.com/dp/{ASIN}?tag={TAG}`
+`https://www.amazon.com/dp/{ASIN}?tag=4bee-20`
 
 Until then, the CTA stays disabled (`href="#"`, label “Configure ASIN”, class `is-pending`).
 
@@ -74,8 +73,7 @@ Silvana should verify that short link still maps to her Associates account.
 
 ## Checklist
 
-1. Confirm Associates tag in Amazon Central (do not assume `4bee-20`).
-2. Set `SienaBee.amazon.associateTag` in `js/script.js`.
-3. Replace each `data-asin="YOUR_ASIN"` on Library + Shop.
-4. Smoke-test one CTA → lands on Amazon with `tag=` query param.
-5. Confirm disclosure note + `/legal/affiliate-disclosure/` are reachable from Library and Shop.
+1. [x] Associates tag confirmed → `4bee-20` in `js/script.js`.
+2. [ ] Replace each `data-asin="YOUR_ASIN"` on Library + Shop (Silvana).
+3. [ ] Smoke-test one CTA → lands on Amazon with `tag=4bee-20`.
+4. [ ] Confirm disclosure note + `/legal/affiliate-disclosure/` are reachable from Library and Shop.

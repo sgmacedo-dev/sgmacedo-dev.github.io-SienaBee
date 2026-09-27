@@ -21,7 +21,7 @@
 | Amazon Prime banner | Discreet placement on **home, library, shop** only |
 | Contact | Mailto CTA; form endpoint deferred |
 | AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
-| Library/Shop Amazon links | `.affiliate-cta` + `data-asin="YOUR_ASIN"` + tag `YOUR_ASSOCIATE_TAG` in `js/script.js` until Silvana confirms |
+| Library/Shop Amazon links | `.affiliate-cta` + `data-asin="YOUR_ASIN"` (ASINs pending Silvana); tag **`4bee-20`** set in `js/script.js` |
 | Legal | `/legal/` privacy, terms, cookies, affiliate disclosure (informational templates) |
 
 ---
@@ -49,23 +49,25 @@
 
 - [x] JSON-LD via shared helper in `js/script.js` (`initSchema`): Organization + WebSite on all pages that load the script; Article when `og:type=article`; BreadcrumbList from canonical path. **No SearchAction** (no on-site search yet).
 - [x] Accessible mobile nav: `.nav-toggle` injected when `.main-nav` exists; `aria-expanded`, Escape / outside-click / link close; CSS panel ≤900px (nav was previously `display:none` with no toggle).
-- [x] Affiliate components: `.affiliate-cta` / `.affiliate-card` / `.affiliate-disclosure-note`; Library + Shop wired with `data-asin="YOUR_ASIN"` placeholders; tag stays `YOUR_ASSOCIATE_TAG` in `SienaBee.amazon` (see `docs/AFFILIATE.md` + `docs/snippets/affiliate-card.html`).
+- [x] Affiliate components: `.affiliate-cta` / `.affiliate-card` / `.affiliate-disclosure-note`; Library + Shop wired with `data-asin="YOUR_ASIN"` placeholders; tag set to **`4bee-20`** in `SienaBee.amazon` (see `docs/AFFILIATE.md` + `docs/snippets/affiliate-card.html`).
 - [x] Disclosure note visible above product grids on Library/Shop; links use correct `../legal/affiliate-disclosure/` depth.
 
-## P2+ (next)
+## P2 (this pass)
 
-- Unify nav IA across all templates
-- Single canonical for *As Time Goes By* (prefer flat `.html`; redirect or drop nested duplicate)
-- Expand Amazon product links with real Associates tag + ASINs (Silvana) — see `docs/AFFILIATE.md`
-- Accessibility / Lighthouse pass
-- Quiet Circle newsletter provider
+- [x] Unify nav IA on main templates (home, library, shop, about, contact, letters, legal indexes, category indexes)
+- [x] *As Time Goes By*: flat `.html` canonical; nested path meta-refresh redirect
+- [x] Associates tag `4bee-20` set; ASINs still pending Silvana
+- [x] Light a11y: skip-link + `main#main-content` on main templates; nav-toggle focus already present; crest alts OK
+- [ ] Full Lighthouse / deeper a11y
+- [ ] Quiet Circle newsletter provider
+- [ ] Real ASINs on Library/Shop (Silvana)
 
 ---
 
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
-2. Amazon Associates tag + real ASINs — set `SienaBee.amazon.associateTag` and each `data-asin` (see `docs/AFFILIATE.md`). Teammate note `4bee-20` is **unverified**. Verify `amzn.to` Prime link.
+2. Real Amazon ASINs for Library/Shop cards (tag **`4bee-20`** already set). Verify `amzn.to` Prime link still maps to Associates account.
 3. Working inboxes: `hello@sienabee.com`, `partnerships@sienabee.com`
 4. Author bio text & photo for About / Editor’s Desk
 5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
@@ -86,13 +88,12 @@
 ---
 
 
-### How to add Amazon Associates later
+### How to finish Amazon Associates (ASINs)
 
-1. Confirm the tracking tag in Amazon Associates Central (do **not** assume `4bee-20`).
-2. Set `associateTag` in `js/script.js` → `SienaBee.amazon`.
-3. Replace each `data-asin="YOUR_ASIN"` on `library/index.html` and `shop/index.html`.
-4. Optional: copy `docs/snippets/affiliate-card.html` for new cards.
-5. Smoke-test one CTA and the Affiliate Disclosure link from Library and Shop.
+1. [x] Tracking tag confirmed → `4bee-20` in `js/script.js` → `SienaBee.amazon`.
+2. Replace each `data-asin="YOUR_ASIN"` on `library/index.html` and `shop/index.html`.
+3. Optional: copy `docs/snippets/affiliate-card.html` for new cards.
+4. Smoke-test one CTA → `tag=4bee-20` and the Affiliate Disclosure link from Library and Shop.
 
 ## Deploy
 
