@@ -1,56 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-
-<loc>https://www.sienabee.com/</loc>
-
-<changefreq>weekly</changefreq>
-
-<priority>1.0</priority>
-
-</url>
-
-<url>
-
-<loc>https://www.sienabee.com/about/</loc>
-
-<changefreq>monthly</changefreq>
-
-<priority>0.9</priority>
-
-</url>
-
-<url>
-
-<loc>https://www.sienabee.com/library/</loc>
-
-<changefreq>weekly</changefreq>
-
-<priority>0.9</priority>
-
-</url>
-
-<url>
-
-<loc>https://www.sienabee.com/letters/</loc>
-
-<changefreq>monthly</changefreq>
-
-<priority>0.8</priority>
-
-</url>
-
-<url>
-
-<loc>https://www.sienabee.com/articles/house-journal/</loc>
-
-<changefreq>weekly</changefreq>
-
-<priority>0.9</priority>
-
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/about/editorial-principles.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/arne-naess-deep-ecology.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/as-time-goes-by.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/dostoevsky-depths-of-human-soul.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/ecology/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/epictetus-discipline-of-freedom.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/garcia-marquez-magical-realism.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/john-muir-cathedral-of-nature.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/literature/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/montaigne-art-of-self-knowledge.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/on-the-utility-of-tenderness.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/philosophy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/policies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/psychology/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/rachel-carson-silent-spring.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/seneca-art-of-living.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/slow-living/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/slow-living/as-time-goes-by/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/stoicism-marcus-aurelius.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/the-illusion-of-legacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/thoreau-walden-art-of-simplicity.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/tolstoy-search-for-truth.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/house-journal/virginia-woolf-inner-life.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/philosophy/the-quiet-power-of-wanting-less/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/policies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/articles/policies/about-the-journal.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/commonplace/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/editor/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/legal/affiliate-disclosure/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/legal/cookie-policy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/legal/privacy-policy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/legal/terms-of-use/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/letters/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/library/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/music/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/reading-room/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/shop/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/start/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/topics/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

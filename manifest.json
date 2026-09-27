@@ -2,19 +2,14 @@
   "name": "Maison Siena Bee",
   "short_name": "Siena Bee",
   "description": "An Editorial House devoted to Beauty, Silence and Wisdom.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#FAF7F2",
   "theme_color": "#8A6A3D",
   "lang": "en-GB",
-  "categories": [
-    "books",
-    "education",
-    "lifestyle",
-    "magazines"
-  ],
+  "categories": ["books", "education", "lifestyle", "magazines"],
   "icons": [
     {
       "src": "images/icon-192.png",

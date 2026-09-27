@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://www.sienabee.com/sitemap.xml
+Sitemap: https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/sitemap.xml

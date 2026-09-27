@@ -70,7 +70,7 @@ Current implementation includes:
 Planned:
 
 - reCAPTCHA v3
-- Contact form
+- Contact (mailto; form endpoint planned)
 - Newsletter
 - Structured Data (Schema.org)
 - Progressive Web App (PWA)
@@ -84,26 +84,38 @@ Planned:
 
 ```
 /
-│
-├── about/
+├── about/              # The House
+├── articles/           # House Journal, philosophy, policies
 ├── library/
-├── essays/
 ├── letters/
 ├── contact/
-├── cabinet/
-│
-├── css/
+├── shop/
+├── editor/
+├── reading-room/
+├── music/
+├── commonplace/
+├── start/
+├── topics/
+├── legal/              # Privacy, terms, cookies, affiliate disclosure
+├── docs/               # PROJECT_STATUS, journalism notes
+├── css/                # style.css + variables.css (source of truth)
 ├── js/
-├── images/
+├── images/             # crest, hero, favicons, og-cover
 ├── data/
-├── content/
-│
+├── assets/css/         # deprecated shim → css/style.css
 ├── index.html
+├── 404.html
 ├── robots.txt
 ├── sitemap.xml
 ├── manifest.json
+├── .env.example
+├── MAISON.md
+├── ROADMAP.md
 └── README.md
 ```
+
+Live project Pages URL (until custom domain):  
+https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/
 
 ---
 

@@ -1,8 +1,20 @@
 [
   {
-    "category": "Essay",
-    "title": "Why Silence Matters",
-    "description": "A reflection on the forgotten virtue of silence in an increasingly noisy world.",
-    "url": "essays/why-silence-matters.html"
+    "category": "House Journal",
+    "title": "As Time Goes By",
+    "description": "Beauty, memory, permanence, and the quiet grace of things that endure.",
+    "url": "articles/house-journal/as-time-goes-by.html"
+  },
+  {
+    "category": "House Journal",
+    "title": "On the Utility of Tenderness",
+    "description": "Utilitarianism, human relationships and the quiet mathematics of kindness.",
+    "url": "articles/house-journal/on-the-utility-of-tenderness.html"
+  },
+  {
+    "category": "Philosophy",
+    "title": "The Quiet Power of Wanting Less",
+    "description": "An essay on restraint, desire and a lighter way of living.",
+    "url": "articles/philosophy/the-quiet-power-of-wanting-less/"
   }
 ]
