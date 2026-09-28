@@ -76,6 +76,8 @@ Library and Shop CTAs use:
 
 **Note:** Short links resolved via GET redirect to `amazon.com.br/dp/{ASIN}` (Associates share links with `tag=4bee-20`). Site marketplace remains `www.amazon.com` per `SienaBee.amazon`. Two destinations may differ from the card title wording: *Mere Christianity* → biography of the book (0691153736); *The Consolations of Philosophy* → Boethius *Consolation* (1513207717). Confirm with Silvana if alternate editions are preferred.
 
+**Re-verification (2026-09-28):** GET-follow-redirect checks for the two supplied short links still map to `0691153736` (Mere Christianity biography) and `1513207717` (Boethius, *The Consolation of Philosophy*). The latter does not identify Alain de Botton; a corrected Silvana link is needed if the card must point to de Botton specifically.
+
 ---
 
 ## 3. Music — Spotify only (Shop)
