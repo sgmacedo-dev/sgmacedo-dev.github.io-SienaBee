@@ -1495,6 +1495,7 @@ blockquote cite{
     flex-shrink:0;
 }
 
+.nav-toggle:focus,
 .nav-toggle:focus-visible{
     outline:2px solid var(--color-gold, #B08D57);
     outline-offset:2px;

@@ -146,6 +146,30 @@
 
         }
 
+
+        .skip-link{
+            position:absolute;
+            left:-9999px;
+            top:auto;
+            width:1px;
+            height:1px;
+            overflow:hidden;
+        }
+        .skip-link:focus{
+            position:static;
+            left:auto;
+            width:auto;
+            height:auto;
+            overflow:visible;
+            display:inline-block;
+            margin-bottom:1rem;
+            padding:0.5rem 1rem;
+            background:#fff;
+            border:1px solid var(--gold);
+            color:var(--text);
+            text-decoration:none;
+        }
+
         footer{
 
             margin-top:45px;
@@ -162,7 +186,12 @@
 
 <body>
 
-<div class="card">
+<a class="skip-link" href="#main-content">
+Skip to content
+</a>
+
+
+<main id="main-content" class="card">
 
 <div class="bee">🐝</div>
 
@@ -209,7 +238,7 @@ Cultivating Beauty • Honouring Silence • Seeking Wisdom
 
 </footer>
 
-</div>
+</main>
 
 </body>
 </html>

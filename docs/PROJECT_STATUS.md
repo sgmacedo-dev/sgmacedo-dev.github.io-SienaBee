@@ -1,6 +1,6 @@
 # Siena Bee — Project Status
 
-**Updated:** 2026-09-27 (America/Sao_Paulo)  
+**Updated:** 2026-09-28 (America/Sao_Paulo)  
 **Repo:** https://github.com/sgmacedo-dev/sgmacedo-dev.github.io-SienaBee  
 **Live (project Pages):** https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/  
 **Stack:** Semantic HTML5 · CSS3 · vanilla JavaScript — no framework migration.  
@@ -18,11 +18,12 @@
 | Asset paths | Relative (`../`, `../../`) — required for project Pages |
 | CSS source of truth | `css/style.css` + `css/variables.css` |
 | Duplicate CSS | `assets/css/style.css` is a deprecated `@import` shim |
-| Amazon Prime banner | Discreet placement on **home, library, shop** only |
+| Amazon Prime banner | Discreet placement on **home, library, shop** only; short link kept (see Affiliate note) |
 | Contact | Mailto CTA; form endpoint deferred |
 | AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
 | Library/Shop Amazon links | `.affiliate-cta` + real `data-asin` wired (see `docs/AFFILIATE.md`); tag **`4bee-20`**; Shop music → Spotify only |
 | Legal | `/legal/` privacy, terms, cookies, affiliate disclosure (informational templates) |
+| Primary nav IA | The House · Editor's Desk · Library · House Shop · Letters · Quiet Circle |
 
 ---
 
@@ -52,22 +53,30 @@
 - [x] Affiliate components: `.affiliate-cta` / `.affiliate-card` / `.affiliate-disclosure-note`; Library + Shop ASINs wired; Shop music via Spotify; tag **`4bee-20`** in `SienaBee.amazon` (see `docs/AFFILIATE.md`).
 - [x] Disclosure note visible above product grids on Library/Shop; links use correct `../legal/affiliate-disclosure/` depth.
 
-## P2 (this pass)
+## P2 done (2026-09-27)
 
 - [x] Unify nav IA on main templates (home, library, shop, about, contact, letters, legal indexes, category indexes)
 - [x] *As Time Goes By*: flat `.html` canonical; nested path meta-refresh redirect
 - [x] Associates tag `4bee-20` set; Library/Shop ASINs wired; music via Spotify
 - [x] Light a11y: skip-link + `main#main-content` on main templates; nav-toggle focus already present; crest alts OK
+- [x] Real ASINs on Library/Shop (resolved from Silvana `link.amazon` short links)
 - [ ] Full Lighthouse / deeper a11y
 - [ ] Quiet Circle newsletter provider
-- [x] Real ASINs on Library/Shop (resolved from Silvana `link.amazon` short links)
+
+## P2/P3 shipped (2026-09-28)
+
+- [x] Unify nav IA on **essay/article templates** + incomplete secondary pages (same six primary links; correct `../` depth). Also injected primary nav on reading-room / start / topics / commonplace (headers had brand only).
+- [x] Light a11y on remaining key pages: skip-link + `main#main-content` (flat House Journal essays, philosophy essay, policies, editor, music, about/editorial-principles, reading-room, start, topics, commonplace, 404). Crest chrome alts already OK; `.nav-toggle:focus` / `:focus-visible` outline confirmed.
+- [x] SEO hygiene spot-check: all existing canonicals / `og:url` still on Pages base; `sitemap.xml` already lists library / shop / legal; **no** leftover `www.sienabee.com` in HTML/XML/JS/txt. Brand emails + console URL `sienabee.com` left intentional.
+- [x] Prime `amzn.to/3RnesWB`: resolves (not fake) to BR Associates Prime with tag **`sgmacedo03-20`** (≠ product tag `4bee-20`); left discreet; documented in `docs/AFFILIATE.md` — do not invent a replacement short link.
+- [x] This status doc updated.
 
 ---
 
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
-2. ~~Real Amazon ASINs for Library/Shop cards~~ (done; tag **`4bee-20`**). Verify `amzn.to` Prime link still maps to Associates account; optionally confirm Mere Christianity / Consolations editions.
+2. ~~Real Amazon ASINs for Library/Shop cards~~ (done; tag **`4bee-20`**). **Prime short link:** confirm `amzn.to/3RnesWB` still hers (currently tags `sgmacedo03-20`); optionally issue a `4bee-20` Prime link. Optionally confirm Mere Christianity / Consolations editions.
 3. Working inboxes: `hello@sienabee.com`, `partnerships@sienabee.com`
 4. Author bio text & photo for About / Editor’s Desk
 5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
@@ -87,13 +96,13 @@
 
 ---
 
-
 ### Amazon Associates (ASINs)
 
 1. [x] Tracking tag confirmed → `4bee-20` in `js/script.js` → `SienaBee.amazon`.
 2. [x] Real ASINs on `library/index.html` and `shop/index.html` (music = Spotify).
 3. Optional: copy `docs/snippets/affiliate-card.html` for new cards.
 4. [x] Sample smoke-test of resolved product URLs; confirm Affiliate Disclosure from Library/Shop as needed.
+5. [ ] Prime banner short link ownership / tag alignment (`sgmacedo03-20` vs `4bee-20`) — Silvana.
 
 ## Deploy
 
