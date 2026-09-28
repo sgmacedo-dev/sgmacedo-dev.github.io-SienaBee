@@ -1,6 +1,6 @@
 # Siena Bee — Project Status
 
-**Updated:** 2026-09-28 ~12:50 (America/Sao_Paulo)
+**Updated:** 2026-09-28 ~13:35 (America/Sao_Paulo)
 **Repo:** https://github.com/sgmacedo-dev/sgmacedo-dev.github.io-SienaBee  
 **Live (project Pages):** https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/  
 **Stack:** Semantic HTML5 · CSS3 · vanilla JavaScript — no framework migration.  
@@ -21,7 +21,7 @@
 | Amazon Prime banner | Discreet placement on **home, library, shop** only; direct `4bee-20` URL (see Affiliate note) |
 | Contact | Mailto CTA only; form endpoint deferred |
 | Quiet Circle | Honest waitlist stub + mailto (`hello@sienabee.com`); **no** newsletter provider / fake form |
-| AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
+| AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID**; **no** root `ads.txt` until real `pub-…` (see `docs/ADSENSE.md`) |
 | Library/Shop Amazon links | `.affiliate-cta` + real `data-asin` wired (see `docs/AFFILIATE.md`); tag **`4bee-20`**; Shop music → Spotify only |
 | Legal | `/legal/` privacy, terms, cookies, affiliate disclosure (informational templates) |
 | Primary nav IA | The House · Editor's Desk · Library · House Shop · Letters · Quiet Circle |
@@ -84,13 +84,22 @@
 - [x] Perf check: `script.js` already `defer` sitewide; `hero.jpg` preload **only** on home.
 - [x] This status doc updated.
 
+## AdSense prep shipped (2026-09-28)
+
+- [x] `docs/ADSENSE.md` — apply URL, where to paste `ca-pub`, `ads.txt` line template
+- [x] `docs/snippets/ad-slot.html` — reserved → live unit pattern
+- [x] Reserved `.ad-slot` consistently on main content surfaces (no fake `ca-pub`)
+- [x] Privacy + Cookie mention advertising **when enabled** (AdSense not active yet)
+- [x] **No** root `ads.txt` until real publisher ID (empty/commented ads.txt avoided)
+- [x] Secondary OG/twitter + canonical on reading-room / start / topics / commonplace; `404` `og:url`
+
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
 2. ~~Real Amazon ASINs for Library/Shop cards~~ (done; tag **`4bee-20`**). **Prime URL:** direct `associadosprime` link uses tag `4bee-20`; no short link. Optionally confirm Mere Christianity / Consolations editions.
 3. Working inboxes: `hello@sienabee.com`, `partnerships@sienabee.com`
 4. Author bio text & photo for About / Editor’s Desk
-5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
+5. AdSense account → paste real `ca-pub-…` when approved (slots + `ads.txt`; follow `docs/ADSENSE.md`)
 6. reCAPTCHA + form endpoint if contact form returns
 7. Quiet Circle newsletter / ESP (or keep mailto waitlist)
 8. Analytics choice / ID
@@ -100,11 +109,16 @@
 
 ### How to add AdSense later
 
-1. Get approved `ca-pub-…` client ID.  
+Full checklist: **`docs/ADSENSE.md`** (apply URL, paste locations, `ads.txt` template).
+
+1. Apply at [Google AdSense](https://www.google.com/adsense/start/); get approved `ca-pub-…` client ID.  
 2. Add the official AdSense script once in `<head>` of templates (or a tiny shared include later).  
-3. Replace reserved `.ad-slot` divs with official `<ins class="adsbygoogle">` units.  
-4. Update Privacy + Cookie pages.  
-5. **Never commit secrets**; site keys that Google marks public may live in HTML.
+3. Replace reserved `.ad-slot` divs with official `<ins class="adsbygoogle">` units (`docs/snippets/ad-slot.html`).  
+4. Create root **`ads.txt` only then** — one line: `google.com, pub-XXXXXXXX, DIRECT, f08c47fec0942fa0` (no comment-only / empty file; ads.txt comments can break parsing).  
+5. Update Privacy + Cookie pages from “when enabled” to active advertising.  
+6. **Never invent `ca-pub` / `pub-` IDs**; never commit secrets. Public site keys may live in HTML when Google marks them public.
+
+**Current:** reserved slots on home, about, editor, letters, library, shop, music, House Journal essays/index, philosophy essay. Privacy/Cookie already mention ads when enabled. **No** `ads.txt` in repo until Silvana pastes a real pub ID.
 
 ---
 
