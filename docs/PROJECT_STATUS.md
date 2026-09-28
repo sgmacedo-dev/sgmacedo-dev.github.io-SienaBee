@@ -1,6 +1,6 @@
 # Siena Bee — Project Status
 
-**Updated:** 2026-09-28 (America/Sao_Paulo)  
+**Updated:** 2026-09-28 ~12:50 (America/Sao_Paulo)
 **Repo:** https://github.com/sgmacedo-dev/sgmacedo-dev.github.io-SienaBee  
 **Live (project Pages):** https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/  
 **Stack:** Semantic HTML5 · CSS3 · vanilla JavaScript — no framework migration.  
@@ -19,7 +19,8 @@
 | CSS source of truth | `css/style.css` + `css/variables.css` |
 | Duplicate CSS | `assets/css/style.css` is a deprecated `@import` shim |
 | Amazon Prime banner | Discreet placement on **home, library, shop** only; direct `4bee-20` URL (see Affiliate note) |
-| Contact | Mailto CTA; form endpoint deferred |
+| Contact | Mailto CTA only; form endpoint deferred |
+| Quiet Circle | Honest waitlist stub + mailto (`hello@sienabee.com`); **no** newsletter provider / fake form |
 | AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
 | Library/Shop Amazon links | `.affiliate-cta` + real `data-asin` wired (see `docs/AFFILIATE.md`); tag **`4bee-20`**; Shop music → Spotify only |
 | Legal | `/legal/` privacy, terms, cookies, affiliate disclosure (informational templates) |
@@ -61,7 +62,7 @@
 - [x] Light a11y: skip-link + `main#main-content` on main templates; nav-toggle focus already present; crest alts OK
 - [x] Real ASINs on Library/Shop (resolved from Silvana `link.amazon` short links)
 - [ ] Full Lighthouse / deeper a11y
-- [ ] Quiet Circle newsletter provider
+- [x] Quiet Circle: dead form → honest waitlist stub + mailto (provider still depends on Silvana)
 
 ## P2/P3 shipped (2026-09-28)
 
@@ -73,6 +74,16 @@
 
 ---
 
+
+## P3 shipped (2026-09-28 — Quiet Circle / meta / 404)
+
+- [x] Quiet Circle: replace dead newsletter form on Letters with waitlist stub + clear copy; home / start / contact card / philosophy essay CTAs → mailto waitlist (no fake backend).
+- [x] Contact: mailto CTAs kept; commented broken form removed (defer note only).
+- [x] 404: site header + primary nav (Pages-absolute paths), suggested rooms, OG/twitter, shared CSS/JS.
+- [x] OG/twitter consistency on key pages: about, contact, letters, shop, editor, music; library + legal twitter (+ og:url / og:description where missing).
+- [x] Perf check: `script.js` already `defer` sitewide; `hero.jpg` preload **only** on home.
+- [x] This status doc updated.
+
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
@@ -81,10 +92,11 @@
 4. Author bio text & photo for About / Editor’s Desk
 5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
 6. reCAPTCHA + form endpoint if contact form returns
-7. Analytics choice / ID
-8. Legal comfort with `/legal/` templates (LGPD) — professional review optional
-9. Search Console property for the live URL
-10. Which essays are “launch set” vs draft
+7. Quiet Circle newsletter / ESP (or keep mailto waitlist)
+8. Analytics choice / ID
+9. Legal comfort with `/legal/` templates (LGPD) — professional review optional
+10. Search Console property for the live URL
+11. Which essays are “launch set” vs draft
 
 ### How to add AdSense later
 
