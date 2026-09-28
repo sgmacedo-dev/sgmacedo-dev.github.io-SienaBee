@@ -61,9 +61,9 @@ Library and Shop CTAs use:
 | Silent Spring | 0141184949 |
 | Ecology, Community and Lifestyle | 0521348730 |
 | The Art of Stillness | 1476784728 |
-| The Consolations of Philosophy | 1513207717 |
+| The Consolations of Philosophy | B00ATLA8RU |
 | Leisure, the Basis of Culture | 1586172565 |
-| Mere Christianity | 0691153736 |
+| Mere Christianity | 0060652926 |
 | French Lavender | B09XKQPTVD |
 | Cedarwood | B09XKNWZ1C |
 | Bergamot | B07KYS7V2F |
@@ -74,9 +74,9 @@ Library and Shop CTAs use:
 | Single-Origin Coffee | B08VKMBSNT |
 | Porcelain Cup | B0D7X35452 |
 
-**Note:** Short links resolved via GET redirect to `amazon.com.br/dp/{ASIN}` (Associates share links with `tag=4bee-20`). Site marketplace remains `www.amazon.com` per `SienaBee.amazon`. Two destinations may differ from the card title wording: *Mere Christianity* → biography of the book (0691153736); *The Consolations of Philosophy* → Boethius *Consolation* (1513207717). Confirm with Silvana if alternate editions are preferred.
+**Note:** Short links resolve via GET redirect to `amazon.com.br/dp/{ASIN}` (Associates share links with `tag=4bee-20`). Site marketplace remains `www.amazon.com` per `SienaBee.amazon`.
 
-**Re-verification (2026-09-28):** GET-follow-redirect checks for the two supplied short links still map to `0691153736` (Mere Christianity biography) and `1513207717` (Boethius, *The Consolation of Philosophy*). The latter does not identify Alain de Botton; a corrected Silvana link is needed if the card must point to de Botton specifically.
+**Mismatch note (2026-09-28):** The Library cards now use the supplied title-matching ASINs: *Mere Christianity* → `0060652926` and *The Consolations of Philosophy* → `B00ATLA8RU`. The Shop has no cards for these titles.
 
 ---
 
