@@ -93,7 +93,17 @@
 - [x] **No** root `ads.txt` until real publisher ID (empty/commented ads.txt avoided)
 - [x] Secondary OG/twitter + canonical on reading-room / start / topics / commonplace; `404` `og:url`
 
+## Launch hygiene shipped (2026-09-28 — silent pass)
+
+- [x] OG/twitter parity on House Journal **category indexes** (literature, ecology, psychology, slow-living, policies); `og:url` on House Journal index + philosophy index
+- [x] Secondary rooms (start / reading-room / topics / commonplace) already had OG/twitter + canonical from prior AdSense prep commit
+- [x] `docs/LAUNCH_CHECKLIST.md` — ordered Silvana ops (DNS, email, Associates, Search Console, AdSense, bio/photo) with **[code ✓]** markers
+- [x] Light Lighthouse: crest `<img>` `width="64" height="64"` sitewide (matches CSS / SVG viewBox); `lang="en"` already present on pages; hero remains CSS background (no img dims needed)
+- [x] This status doc updated
+
 ## Depends on Silvana
+
+Ops order with checkboxes: **`docs/LAUNCH_CHECKLIST.md`**.
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
 2. ~~Real Amazon ASINs for Library/Shop cards~~ (done; tag **`4bee-20`**). **Prime URL:** direct `associadosprime` link uses tag `4bee-20`; no short link. Optionally confirm Mere Christianity / Consolations editions.
