@@ -656,7 +656,7 @@ function initSchema(){
 /* ==========================================================
    Amazon Affiliate
    Tag confirmed (Silvana): 4bee-20 (Social Media Associates tag).
-   ASINs still pending — keep data-asin="YOUR_ASIN" until Silvana supplies.
+   Library/Shop ASINs wired — see docs/AFFILIATE.md. Shop music uses Spotify.
 ========================================================== */
 
 SienaBee.amazon = {
