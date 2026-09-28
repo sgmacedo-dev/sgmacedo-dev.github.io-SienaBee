@@ -18,7 +18,7 @@
 | Asset paths | Relative (`../`, `../../`) — required for project Pages |
 | CSS source of truth | `css/style.css` + `css/variables.css` |
 | Duplicate CSS | `assets/css/style.css` is a deprecated `@import` shim |
-| Amazon Prime banner | Discreet placement on **home, library, shop** only; short link kept (see Affiliate note) |
+| Amazon Prime banner | Discreet placement on **home, library, shop** only; direct `4bee-20` URL (see Affiliate note) |
 | Contact | Mailto CTA; form endpoint deferred |
 | AdSense | Reserved `.ad-slot` + HTML comments only — **no publisher ID** |
 | Library/Shop Amazon links | `.affiliate-cta` + real `data-asin` wired (see `docs/AFFILIATE.md`); tag **`4bee-20`**; Shop music → Spotify only |
@@ -68,7 +68,7 @@
 - [x] Unify nav IA on **essay/article templates** + incomplete secondary pages (same six primary links; correct `../` depth). Also injected primary nav on reading-room / start / topics / commonplace (headers had brand only).
 - [x] Light a11y on remaining key pages: skip-link + `main#main-content` (flat House Journal essays, philosophy essay, policies, editor, music, about/editorial-principles, reading-room, start, topics, commonplace, 404). Crest chrome alts already OK; `.nav-toggle:focus` / `:focus-visible` outline confirmed.
 - [x] SEO hygiene spot-check: all existing canonicals / `og:url` still on Pages base; `sitemap.xml` already lists library / shop / legal; **no** leftover `www.sienabee.com` in HTML/XML/JS/txt. Brand emails + console URL `sienabee.com` left intentional.
-- [x] Prime `amzn.to/3RnesWB`: resolves (not fake) to BR Associates Prime with tag **`sgmacedo03-20`** (≠ product tag `4bee-20`); left discreet; documented in `docs/AFFILIATE.md` — do not invent a replacement short link.
+- [x] Prime banner uses the direct BR Associates URL with tag **`4bee-20`**; no short link; documented in `docs/AFFILIATE.md`.
 - [x] This status doc updated.
 
 ---
@@ -76,7 +76,7 @@
 ## Depends on Silvana
 
 1. Custom domain DNS + GitHub Pages `CNAME` for `sienabee.com` / `www`
-2. ~~Real Amazon ASINs for Library/Shop cards~~ (done; tag **`4bee-20`**). **Prime short link:** confirm `amzn.to/3RnesWB` still hers (currently tags `sgmacedo03-20`); optionally issue a `4bee-20` Prime link. Optionally confirm Mere Christianity / Consolations editions.
+2. ~~Real Amazon ASINs for Library/Shop cards~~ (done; tag **`4bee-20`**). **Prime URL:** direct `associadosprime` link uses tag `4bee-20`; no short link. Optionally confirm Mere Christianity / Consolations editions.
 3. Working inboxes: `hello@sienabee.com`, `partnerships@sienabee.com`
 4. Author bio text & photo for About / Editor’s Desk
 5. AdSense account → paste real `ca-pub-…` when approved (into reserved slots)
@@ -102,7 +102,7 @@
 2. [x] Real ASINs on `library/index.html` and `shop/index.html` (music = Spotify).
 3. Optional: copy `docs/snippets/affiliate-card.html` for new cards.
 4. [x] Sample smoke-test of resolved product URLs; confirm Affiliate Disclosure from Library/Shop as needed.
-5. [ ] Prime banner short link ownership / tag alignment (`sgmacedo03-20` vs `4bee-20`) — Silvana.
+5. [x] Prime banner uses the direct `4bee-20` URL; no short link.
 
 ## Deploy
 

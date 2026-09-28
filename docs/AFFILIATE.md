@@ -110,9 +110,9 @@ Keep path depth correct for the disclosure link (`../legal/…` from `/library/`
 
 ## 6. Prime banner
 
-Home / Library / Shop keep a discreet `.prime-banner` linking to `https://amzn.to/3RnesWB` (`rel="nofollow sponsored noopener"`).
+Home / Library / Shop keep a discreet `.prime-banner` linking to `https://www.amazon.com.br/associadosprime?tag=4bee-20` (`rel="nofollow sponsored noopener"`).
 
-**Checked 2026-09-28:** short link resolves (not fake) to Amazon BR Associates Prime (`associadosprime`) with tag **`sgmacedo03-20`** — not the product tag **`4bee-20`**. Destination can 503 from some bots/regions; leave as-is (do not invent a new short link). Silvana: confirm the short link still belongs to her Associates account, or replace with a `4bee-20` Prime deep link when she has one.
+**Updated 2026-09-28:** Prime uses the direct Amazon BR Associates URL with tag **`4bee-20`**. Do not replace it with a shortened link.
 
 ---
 
