@@ -1,7 +1,7 @@
 # Google AdSense — Siena Bee
 
-**Status:** Reserved HTML slots only. **No** `ca-pub-…` ID in the repo yet.  
-**Do not invent or paste a fake publisher ID.**
+**Status:** The owner-supplied publisher ID `ca-pub-2981303662156389` is now in the site: the official AdSense loader is in the `<head>` of each public HTML page, and root `ads.txt` has the matching `pub-2981303662156389` line. Reserved `.ad-slot` divs are still placeholders (no live ad units).  
+**Do not invent or paste a fake publisher ID.** This `ca-pub` was supplied by the site owner; do not substitute or invent another.
 
 Live Pages base (until custom domain):  
 `https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/`
