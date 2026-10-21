@@ -16,14 +16,14 @@ In `js/script.js`:
 ```js
 SienaBee.amazon = {
     associateTag: "4bee-20",
-    marketplace: "www.amazon.com",
+    marketplace: "www.amazon.com.br",
     disclosurePath: "legal/affiliate-disclosure/"
 };
 ```
 
 Documented mirror: `.env.example` → `AMAZON_ASSOCIATE_TAG=4bee-20` (Pages does not read `.env`).
 
-JS builds: `https://www.amazon.com/dp/{ASIN}?tag=4bee-20`
+JS builds: `https://www.amazon.com.br/dp/{ASIN}?tag=4bee-20` (tag 4bee-20 is registered with Amazon Brasil — 2026-10-21)
 
 ---
 
@@ -74,7 +74,7 @@ Library and Shop CTAs use:
 | Single-Origin Coffee | B08VKMBSNT |
 | Porcelain Cup | B0D7X35452 |
 
-**Note:** Short links resolve via GET redirect to `amazon.com.br/dp/{ASIN}` (Associates share links with `tag=4bee-20`). Site marketplace remains `www.amazon.com` per `SienaBee.amazon`.
+**Note:** Short links resolve via GET redirect to `amazon.com.br/dp/{ASIN}` (Associates share links with `tag=4bee-20`). Site marketplace is `www.amazon.com.br` per `SienaBee.amazon` (since 2026-10-21).
 
 **Mismatch note (2026-09-28):** The Library cards now use the supplied title-matching ASINs: *Mere Christianity* → `0060652926` and *The Consolations of Philosophy* → `B00ATLA8RU`. The Shop has no cards for these titles.
 

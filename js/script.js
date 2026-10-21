@@ -409,7 +409,7 @@ function getSiteRootPrefix(){
 }
 
 const SITE_BASE =
-    "https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/";
+    "https://sienabee.com/";
 
 /* ==========================================================
    Mobile Navigation
@@ -661,7 +661,7 @@ function initSchema(){
 
 SienaBee.amazon = {
     associateTag: "4bee-20",
-    marketplace: "www.amazon.com",
+    marketplace: "www.amazon.com.br",
     disclosurePath: "legal/affiliate-disclosure/"
 };
 
