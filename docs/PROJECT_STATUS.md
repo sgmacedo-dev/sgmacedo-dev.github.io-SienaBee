@@ -2,7 +2,7 @@
 
 **Updated:** 2026-09-28 ~13:35 (America/Sao_Paulo)
 **Repo:** https://github.com/sgmacedo-dev/sgmacedo-dev.github.io-SienaBee  
-**Live (project Pages):** https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/  
+**Live (custom domain):** https://sienabee.com/  
 **Stack:** Semantic HTML5 · CSS3 · vanilla JavaScript — no framework migration.  
 **Identity:** Philosophy · Silence · Slow Living · *Pulchritudo · Silentium · Sapientia*  
 **Editorial line:** no astrology / esotericism.
@@ -144,7 +144,7 @@ Full checklist: **`docs/ADSENSE.md`** (apply URL, paste locations, `ads.txt` tem
 
 - Host: GitHub Pages (project site)  
 - Branch: `main`  
-- Path prefix: `/sgmacedo-dev.github.io-SienaBee/`  
+- Custom domain: `sienabee.com` (CNAME) — no path prefix; site served from `/`  
 - After push: wait for Pages rebuild, then smoke-test CSS on a deep essay URL.
 
 ---

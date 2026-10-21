@@ -4,7 +4,7 @@
 **Do not invent or paste a fake publisher ID.** This `ca-pub` was supplied by the site owner; do not substitute or invent another.
 
 Live Pages base (until custom domain):  
-`https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/`
+`https://sienabee.com/`
 
 ---
 
@@ -50,7 +50,7 @@ When Silvana has `pub-XXXXXXXXXXXXXXXX`:
 
 1. Create **`/ads.txt`** at the **site root** (same folder as `index.html`), so it is served at:
 
-   `https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/ads.txt`
+   `https://sienabee.com/ads.txt`
 
    After custom domain DNS, also ensure:
 

@@ -5,7 +5,7 @@
 **Music (Shop):** Spotify outbound only — no Amazon affiliate for tracks.
 
 Live Pages base (canonical until custom domain):  
-`https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/`
+`https://sienabee.com/`
 
 ---
 

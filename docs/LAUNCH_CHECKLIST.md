@@ -1,7 +1,7 @@
 # Siena Bee — Launch Checklist (ops)
 
 **For:** Silvana (accounts / DNS / dashboards)  
-**Live (until custom domain):** https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/  
+**Live (custom domain):** https://sienabee.com/  
 **Repo:** https://github.com/sgmacedo-dev/sgmacedo-dev.github.io-SienaBee  
 
 Ordered for go-live. Items marked **[code ✓]** are already done in the repo; **[Silvana]** needs your account or decision.
@@ -58,7 +58,7 @@ Ordered for go-live. Items marked **[code ✓]** are already done in the repo; *
 1. [ ] Add property for the **current** live URL (Pages base), or apex once DNS is live.
 2. [ ] Verify ownership (HTML file, DNS TXT, or Google Analytics — your choice).
 3. [ ] Submit `sitemap.xml`  
-   Pages: `https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/sitemap.xml`
+   Pages: `https://sienabee.com/sitemap.xml`
 4. [ ] After domain cutover: add/move property + resubmit sitemap.
 
 **Code today:** `sitemap.xml` + `robots.txt` aligned to Pages base — **[code ✓]**.

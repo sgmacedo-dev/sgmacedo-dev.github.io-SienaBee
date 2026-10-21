@@ -115,7 +115,7 @@ Planned:
 ```
 
 Live project Pages URL (until custom domain):  
-https://sgmacedo-dev.github.io/sgmacedo-dev.github.io-SienaBee/
+https://sienabee.com/
 
 ---
 
