@@ -602,7 +602,7 @@ function initSchema(){
             "name": "Siena Bee",
             "url": SITE_BASE
         },
-        "inLanguage": "en"
+        "inLanguage": "en-GB"
     });
 
     if(ogType === "article"){
@@ -656,7 +656,7 @@ function initSchema(){
 /* ==========================================================
    Amazon Affiliate
    Tag confirmed (Silvana): 4bee-20 (Social Media Associates tag).
-   Library/Shop ASINs wired — see docs/AFFILIATE.md. Shop music uses Spotify.
+   Library/Shop ASINs wired. Shop music uses Spotify.
 ========================================================== */
 
 SienaBee.amazon = {
@@ -747,7 +747,7 @@ function initAffiliatePlaceholders(){
             el.setAttribute("href", "#");
             el.setAttribute("aria-disabled", "true");
             el.classList.add("is-pending");
-            el.setAttribute("title", "Configure ASIN — see docs/AFFILIATE.md");
+            el.setAttribute("title", "Configure ASIN");
             if(/view at amazon/i.test(el.textContent.trim())){
                 el.textContent = "Configure ASIN";
             }
