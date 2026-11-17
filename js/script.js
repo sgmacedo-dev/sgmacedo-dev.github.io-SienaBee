@@ -582,10 +582,6 @@ function initSchema(){
         "logo": SITE_BASE + "images/crest.svg",
         "description":
             "An editorial house devoted to philosophy, silence and slow living.",
-        "founder": {
-            "@type": "Person",
-            "name": "Silvana Macedo"
-        },
         "slogan": "Pulchritudo · Silentium · Sapientia"
     });
 
@@ -607,7 +603,7 @@ function initSchema(){
 
     if(ogType === "article"){
         const authorMeta = metaContent('meta[name="author"]');
-        const authorName = authorMeta || "Silvana Macedo";
+        const authorName = authorMeta || "Siena Bee";
         const article = {
             "@context": "https://schema.org",
             "@type": "Article",
@@ -615,10 +611,9 @@ function initSchema(){
             "description": description,
             "url": canonical,
             "image": image,
-            "author": {
-                "@type": "Person",
-                "name": authorName
-            },
+            "author": authorName === "Siena Bee"
+                ? { "@type": "Organization", "name": "Siena Bee", "url": SITE_BASE }
+                : { "@type": "Person", "name": authorName },
             "publisher": {
                 "@type": "Organization",
                 "name": "Siena Bee",
@@ -655,7 +650,7 @@ function initSchema(){
 
 /* ==========================================================
    Amazon Affiliate
-   Tag confirmed (Silvana): 4bee-20 (Social Media Associates tag).
+   Tag confirmed (owner): 4bee-20 (Social Media Associates tag).
    Library/Shop ASINs wired. Shop music uses Spotify.
 ========================================================== */
 
